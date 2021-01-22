@@ -18,7 +18,7 @@ public class QuarkIssue {
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class Events {
         @SubscribeEvent
-        public static void onChunkLoad(ChunkEvent e){
+        public static void onChunkLoad(ChunkEvent.Load e){
             IChunk chunk = e.getChunk();
 
             for(BlockPos pos : chunk.getTileEntitiesPos())
